@@ -33,3 +33,11 @@ jobs:
       run: docker build -t my-python-app .
     - name: Симуляція деплою
       run: echo "Деплой виконано успішно (імітація)"
+  production:
+    needs: docker-build # виконується лише після успішного тестування
+    runs-on: ubuntu-latest
+    environments:
+      name: production
+    steps:
+      - name: simulate deploy
+        run: echo "123"
