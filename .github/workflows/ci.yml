@@ -3,7 +3,7 @@ name: CI/CD for Python App
 # Умови запуску: при пуші в гілку main або pull request
 on:
  push:
- branches: [master]
+  branches: [master]
  pull_request:
 jobs:
  # Перше завдання: збірка і тестування
