@@ -21,7 +21,7 @@ jobs:
       python -m pip install --upgrade pip
       pip install -r requirements.txt
   - name: Запуск тестів
-    run: pytest # автоматичне тестування
+    run: PYTHONPATH=. pytest # автоматичне тестування
  # Друге завдання: збірка Docker-образу та симуляція деплою
  docker-build:
   needs: build-and-test # виконується лише після успішного тестування
